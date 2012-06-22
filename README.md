@@ -7,6 +7,16 @@ SnappyTree is a procedural tree creation app designed to demo [proctree.js](http
 
 SnappyTree is released under [GNU General Public License, version 2](http://www.gnu.org/licenses/gpl-2.0.html)
 
+
+### Screenshots ###
+[![Screenshot 1](https://github.com/supereggbert/SnappyTree/raw/master/images/screens/thumb1.jpg)](https://github.com/supereggbert/SnappyTree/raw/master/images/screens/screen1.jpg)
+[![Screenshot 2](https://github.com/supereggbert/SnappyTree/raw/master/images/screens/thumb2.jpg)](https://github.com/supereggbert/SnappyTree/raw/master/images/screens/screen2.jpg)
+[![Screenshot 3](https://github.com/supereggbert/SnappyTree/raw/master/images/screens/thumb3.jpg)](https://github.com/supereggbert/SnappyTree/raw/master/images/screens/screen3.jpg)
+
+[![Screenshot 4](https://github.com/supereggbert/SnappyTree/raw/master/images/screens/thumb4.jpg)](https://github.com/supereggbert/SnappyTree/raw/master/images/screens/screen4.jpg)
+[![Screenshot 5](https://github.com/supereggbert/SnappyTree/raw/master/images/screens/thumb5.jpg)](https://github.com/supereggbert/SnappyTree/raw/master/images/screens/screen5.jpg)
+[![Screenshot 6](https://github.com/supereggbert/SnappyTree/raw/master/images/screens/thumb6.jpg)](https://github.com/supereggbert/SnappyTree/raw/master/images/screens/screen6.jpg)
+
     
 ### Libraries Used ###
 
