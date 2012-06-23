@@ -1,0 +1,164 @@
+<!doctype html>
+<html manifest="snappytree.appcache">
+<head>
+<title>Tree</title>
+<link type="text/css" href="css/base.css" rel="stylesheet" />
+<link  type="text/css" href="css/pagestyles.css" rel="stylesheet" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" /> 
+<meta property="og:title" content="SnappyTree - Online Tree Generator" />
+<meta property="og:description" content="An online WebGL application for creating trees, supporting export to Collada or Wavefront for easy use in your own projects; alternativly, use the proctree.js json produced to procedurally recreated in javascript." />
+<meta property="og:image" content="images/screenshot.jpg" />
+</head>
+<body>
+
+<div id="header">
+<div id="logo"><img src="images/tree.png" alt="TOM" /></div>
+<h1>SnappyTree</h1>
+
+<div id="about" title="SnappyTree">
+<p>SnappyTree by Paul Brunt, contact:<br />
+<a href="mailto:tree@paulbrunt.co.uk">tree@paulbrunt.co.uk</a>
+| <a href="http://twitter.com/super_eggbert">@super_eggbert</a>
+| <a href="http://www.paulbrunt.co.uk">www.paulbrunt.co.uk</a>
+</p>
+<p>
+<a href="http://www.snappytree.com">Home of SnappyTree</a> | <a href="https://github.com/supereggbert/SnappyTree/">Source Code on GitHub</a></p>
+<p>
+SnappyTree is a procedural tree creation app designed to demo webgl and proctree.js.  SnappyTree produces proctree.js JSON which can be used to generate trees client side in other web applications/games.  In addition, SnappyTree also provides export options for wavefront and collada file formats so the generated trees can be used in other native applications.
+</p>
+<p>    
+SnappyTree is released under <a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License, version 2</a>
+</p>
+<h3>Libraries</h3>
+<ul>
+<li><a href="https://github.com/supereggbert/proctree.js/">proctree.js</a> - Procedural trees in javascript</li>
+<li><a href="https://github.com/supereggbert/GLGE/">GLGE</a> - The WebGL library for the lazy</li>
+<li><a href="http://jquery.com/">jQuery</a> - The Write Less, Do More</li>
+<li><a href="http://jqueryui.com/">jQuery UI</a> - User Interface</li>
+</ul>
+
+<h3>Textures</h3>
+<p>Textures from <a href="http://opengameart.org">OpenGameArt.org</a>:</p>
+<ul>
+<li>Bark Texture 1 - <a href="http://opengameart.org/node/8153">http://opengameart.org/node/8153</a></li>
+<li>Bark Texture 2 - <a href="http://opengameart.org/node/10050">http://opengameart.org/node/10050</a></li>
+<li>Bark Texture 3 - <a href="http://opengameart.org/node/8341">http://opengameart.org/node/8341</a></li>
+<li>Bark Texture 4 - <a href="http://opengameart.org/node/7929">http://opengameart.org/node/7929</a></li>
+</ul>
+<p>All branch textures were created using <a href="http://arnaud.ile.nc/cantree/">Cantree</a></p>
+
+<p><small>&copy; Copyright <a href="http://www.paulbrunt.co.uk/" target="_blank">Paul Brunt</a> 2012. All Rights Reserved.</small></p>
+</div>
+
+<div id="toplinks">
+<a href="javascript:showAbout()">About/Credits</a><br />
+</div>
+
+<div id="exportlinks">
+<h2>Export</h2><a href="javascript:showSaveWavefront()">WaveFront (.obj)</a><a href="javascript:showSaveCollada()">Collada (.dae)</a>
+</div>
+
+<div id="exportCollada" class="export"  title="Export Collada">
+<p>COLLADA is a COLLAborative Design Activity for establishing an interchange file format for interactive 3D applications. COLLADA is managed by the nonprofit technology consortium, the Khronos Group.
+</p>
+<p>
+Currently only the export of mesh is supported. You will need to re-apply the textures after export.
+</p>
+<p>To export click the link below. Note: if you are using a browser other than Chrome you will need to rename the file after download (at least for the time being).</p>
+<p><a href="" id="exportdae" download="tree.dae" >Download tree.dae</a></p>
+</div>
+
+<div id="exportWavefront" class="export"  title="Export Wavefront">
+<p>
+The wavefront file format is open and is used by many 3D graphics applications. For the most part it is a universally accepted format.
+</p>
+<p>
+Currently only the export of mesh is supported. You will need to re-apply the textures after export.
+</p>
+<p>To export click the link below. Note: if you are using a browser other than Chrome you will need to rename the file after download (at least for the time being).</p>
+<p><a href="" id="exportobj" download="tree.obj" >Download tree.obj</a></p>
+</div>
+
+</div>
+<div id="controls">
+
+<div id="treeStats">
+<table>
+<tr>
+<th>Generation Time:</th><td id="time">0</td>
+</tr>
+<tr>
+<th>Verticies:</th><td id="verts">0</td>
+</tr>
+<tr>
+<th>Triangles:</th><td id="faces">0</td>
+</tr>
+</table>
+</div>
+<div id="sliders">
+	<ul id="presets">
+	<li><a href="#tab0">Presets</a></li>
+	<li><a href="#tab1">JSON</a></li>
+	</ul>
+	<div id="tab0">
+		<h4>Presets</h4>
+		<ul id="presetslist">
+		<li><a href="javascript:setPreset(0)"><img src="images/preset1.jpg" alt="Tree 1" /></a></li>
+		<li><a href="javascript:setPreset(1)"><img src="images/preset2.jpg" alt="Tree 2" /></a></li>
+		<li><a href="javascript:setPreset(2)"><img src="images/preset3.jpg" alt="Tree 3" /></a></li>
+		<li><a href="javascript:setPreset(3)"><img src="images/preset4.jpg" alt="Tree 4" /></a></li>
+		<li><a href="javascript:setPreset(4)"><img src="images/preset5.jpg" alt="Tree 5" /></a></li>
+		<li><a href="javascript:setPreset(5)"><img src="images/preset6.jpg" alt="Tree 6" /></a></li>
+		<li><a href="javascript:setPreset(6)"><img src="images/preset7.jpg" alt="Tree 7" /></a></li>
+		<li><a href="javascript:setPreset(7)"><img src="images/preset8.jpg" alt="Tree 8" /></a></li>
+		</ul>		
+	</div>
+	<div id="tab1">	
+		<h4>proctree.js JSON</h4>	
+		<p>Copy and paste to save/load trees. This JSON can be used to create tree dynamically in Javascript</p>
+		<textarea id="json"></textarea>
+		
+	</div>
+
+</div>
+
+</div>
+<div id="fullview">
+<div id="generating">Generating...</div>
+<canvas id="canvas" width="500" height="500"></canvas>
+<div id="share">
+<span id="social">
+<a id="googleplus" href="javascript:void(0)"><img src="images/googleplus.png" border="0" alt="g+"></a>
+<a id="twitter" href="javascript:void(0)"><img src="images/twitter.png" border="0" alt="twitter"> </a>
+<a id="facebook" href="javascript:void(0)"><img src="images/facebook.png" border="0" alt="facebook"> </a>
+</span>
+<h2>Share: </h2><span id="directlink"><b>Link: </b><input id="linkbox" type="text" /></span> 
+
+</div>
+</div>
+
+<script type="text/javascript" src="js/glge-compiled-min.js"></script>
+<script type="text/javascript" src="js/glge_flycamera.js"></script>
+<script type="text/javascript" src="js/tree.js"></script> 
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.7.custom.min.js"></script>
+<script type="text/javascript" src="js/export.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1964529-5']);
+  _gaq.push(['_setDomainName', 'snappytree.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

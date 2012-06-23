@@ -22,7 +22,7 @@ SnappyTree is released under [GNU General Public License, version 2](http://www.
 
 * [proctree.js](https://github.com/supereggbert/proctree.js)  - Procedural trees in javascript
 * [GLGE](https://github.com/supereggbert/GLGE)  - The WebGL library for the lazy
-* [jQuery](http://jquery.com/) - The Write Less, Do More
+* [jQuery](http://jquery.com/) - Write Less, Do More
 * [jQuery UI](http://jqueryui.com/)  - User Interface
 
 ### Textures ###

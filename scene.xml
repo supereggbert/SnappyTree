@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+	<glge>
+		<mesh id="groundMesh">
+			<positions>1.000,1.000,0.000,-1.000,1.000,0.000,-1.000,-1.000,0.000,1.000,1.000,0.000,-1.000,-1.000,0.000,1.000,-1.000,0.000</positions>
+			<normals>-0.000,0.000,1.000,-0.000,0.000,1.000,-0.000,0.000,1.000,0.000,-0.000,1.000,0.000,-0.000,1.000,0.000,-0.000,1.000</normals>
+			<uv1>0.000,0.000,1.000,0.000,1.000,1.000,0.000,0.000,1.000,1.000,0.000,1.000</uv1>
+			<faces>0,1,2,3,4,5,</faces>
+		</mesh>
+		
+		<mesh id="tri">
+			<positions>1.000,1.000,0.000,-1.000,1.000,0.000,-1.000,-1.000,0.000</positions>
+		</mesh>
+		
+		<material id="BranchType1" specular="0" translucency="0.5" color="#888" reflectivity="1">
+			<texture id="branch1color" src="images/branches/branch1.png" />
+			<material_layer texture="#branch1color" mapto="M_COLOR" mapinput="UV1" />
+			<material_layer texture="#branch1color" mapto="M_ALPHA" mapinput="UV1" />
+			<texture id="branch1normal" src="images/branches/branch1norm.jpg" />
+			<material_layer texture="#branch1normal" mapto="M_NOR" mapinput="UV1" />
+		</material>
+		
+		<material id="BranchType2" specular="0" translucency="0.5" color="#888" reflectivity="1">
+			<texture id="branch2color" src="images/branches/branch2.png" />
+			<material_layer texture="#branch2color" mapto="M_COLOR" mapinput="UV1" />
+			<material_layer texture="#branch2color" mapto="M_ALPHA" mapinput="UV1" />
+			<texture id="branch2normal" src="images/branches/branch2norm.jpg" />
+			<material_layer texture="#branch2normal" mapto="M_NOR" mapinput="UV1" />
+		</material>
+		
+		<material id="BranchType3" specular="0" translucency="0.5" color="#888" reflectivity="1.5">
+			<texture id="branch3color" src="images/branches/branch3.png" />
+			<material_layer texture="#branch3color" mapto="M_COLOR" mapinput="UV1" />
+			<material_layer texture="#branch3color" mapto="M_ALPHA" mapinput="UV1" />
+		</material>
+		
+		<material id="BranchType4" specular="0" translucency="0.5" color="#888" reflectivity="1">
+			<texture id="branch4color" src="images/branches/branch4.png" />
+			<material_layer texture="#branch4color" mapto="M_COLOR" mapinput="UV1" />
+			<material_layer texture="#branch4color" mapto="M_ALPHA" mapinput="UV1" />
+			<texture id="branch4normal" src="images/branches/branch4norm.jpg" />
+			<material_layer texture="#branch4normal" mapto="M_NOR" mapinput="UV1" />
+		</material>
+		
+		<material id="BranchType5" specular="0" translucency="0.5" color="#888" reflectivity="1">
+			<texture id="branch5color" src="images/branches/branch5.png" pre_muliply_alpha="TRUE" />
+			<material_layer texture="#branch5color" mapto="M_COLOR" mapinput="UV1" />
+			<material_layer texture="#branch5color" mapto="M_ALPHA" mapinput="UV1" />
+			<texture id="branch5normal" src="images/branches/branch5norm.jpg" />
+			<material_layer texture="#branch5normal" mapto="M_NOR" mapinput="UV1" />
+			
+		</material>
+		<material id="BranchType6" specular="0"  translucency="0.5" color="#888" reflectivity="1">
+			<texture id="branch6color" src="images/branches/branch6.png" />
+			<material_layer texture="#branch6color" mapto="M_COLOR" mapinput="UV1" />
+			<material_layer texture="#branch6color" mapto="M_ALPHA" mapinput="UV1" />
+			<texture id="branch6normal" src="images/branches/branch6norm.jpg" />
+			<material_layer texture="#branch6normal" mapto="M_NOR" mapinput="UV1" />
+		</material>
+		
+		<material id="TrunkType1" specular="0.1" shininess="10.0" color="#888" reflectivity="1.5">
+			<texture id="trunk1color" src="images/trunk/color1.jpg" />
+			<material_layer texture="#trunk1color" mapto="M_COLOR" mapinput="UV1" />
+			<texture id="trunk1normal" src="images/trunk/norm1.jpg" />
+			<material_layer texture="#trunk1normal" mapto="M_NOR" mapinput="UV1" />
+		</material>
+		
+		<material id="TrunkType2" specular="0.1" shininess="10.0" color="#888" reflectivity="1.5">
+			<texture id="trunk2color" src="images/trunk/color2.jpg" />
+			<material_layer texture="#trunk2color" mapto="M_COLOR" scale_x="2" scale_y="3" mapinput="UV1" />
+			<texture id="trunk2normal" src="images/trunk/norm2.jpg" />
+			<material_layer texture="#trunk2normal" mapto="M_NOR" scale_x="2" scale_y="3"  mapinput="UV1" />
+		</material>
+		
+		<material id="TrunkType3" specular="0.1" shininess="10.0" color="#888" reflectivity="1">
+			<texture id="trunk3color" src="images/trunk/color3.jpg" />
+			<material_layer texture="#trunk3color" mapto="M_COLOR" scale_x="1" scale_y="2"  mapinput="UV1" />
+			<texture id="trunk3normal" src="images/trunk/norm3.jpg" />
+			<material_layer texture="#trunk3normal" mapto="M_NOR" scale_x="1" scale_y="2"  mapinput="UV1" />
+		</material>
+		
+		<material id="TrunkType4" specular="0.1" shininess="10.0" color="#888" reflectivity="1">
+			<texture id="trunk4color" src="images/trunk/color4.jpg" />
+			<material_layer texture="#trunk4color" mapto="M_COLOR" scale_x="1" scale_y="1" mapinput="UV1" />
+			<texture id="trunk4normal" src="images/trunk/norm4.jpg" />
+			<material_layer texture="#trunk4normal" mapto="M_NOR" scale_x="1" scale_y="1" mapinput="UV1" />
+		</material>
+		
+		<material id="lines" specular="0" color="#000" fade_distance="-6" />
+		
+		<material id="groundmat" specular="0" color="#888" reflectivity="1">
+			<texture id="grounttex" src="images/ground.png" />
+			<material_layer texture="#grounttex" mapto="M_COLOR" mapinput="UV1" />
+			<material_layer texture="#grounttex" mapto="M_ALPHA" mapinput="UV1" />
+		</material>
+
+		<scene id="mainscene" ambient_color="#555" background_color="rgba(0,0,0,0)" camera="#mainCamera">
+			<fly_camera id="mainCamera" offset="12"  latitude="-0.2" far="500" longitude="1.8" initial_offset="12" loc_y="2.5" />
+			<object mesh="#groundMesh" material="#groundmat" Ztransparent="true" loc_z="0" rot_x="-1.57" scale="50" />
+			<light color="#888" id="light"  loc_z="5"   loc_y="15" rot_x="-1.21" spot_cos_cut_off="0.94" spot_softness="10" spot_soft_distance="0.4" buffer_height="512" buffer_width="512"  cast_shadows="TRUE" attenuation_quadratic="0" attenuation_linear="0" attenuation_constant="0.5" type="L_SPOT" />
+		</scene>
+	</glge>
